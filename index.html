@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Kolosalon - cvičení JS</title>
+  </head>
+  <body>
+    <div class="web-wrap">
+      <section class="title">
+        <h1 class="logo">Kolosalon</h1>
+        <hr />
+      </section>
+      <section class="reservation">
+        <form action="" class="reservation-form">
+          <section class="bike-type">
+            <h2>Objednávkový formulář</h2>
+            <table class="reservation-table">
+              <thead>
+                <tr>
+                  <td>Typ kola</td>
+                  <td>Cena za jedno kolo</td>
+                  <td>Počet kusů</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <input type="checkbox" name="mtb" id="mtb-chk" /><label
+                      for="mtb"
+                      >Horské kolo</label
+                    >
+                  </td>
+                  <td>
+                    <p id="mtb-price">1500</p>
+                  </td>
+                  <td><input type="number" value="0" id="mtb-count" /></td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" name="kid" id="kid-chk" /><label
+                      for="kid"
+                      >Dětské kolo</label
+                    >
+                  </td>
+                  <td>
+                    <p id="kid-price">2354</p>
+                  </td>
+                  <td><input type="number" value="0" id="kid-count" /></td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" name="road" id="road-chk" /><label
+                      for="road"
+                      >Silniční kolo</label
+                    >
+                  </td>
+                  <td>
+                    <p id="road-price">3751</p>
+                  </td>
+                  <td><input type="number" value="0" id="road-count" /></td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      type="checkbox"
+                      name="gravel"
+                      id="gravel-chk"
+                    /><label for="gravel">Gravel Kolo</label>
+                  </td>
+                  <td>
+                    <p id="gravel-price">7566</p>
+                  </td>
+                  <td><input type="number" value="0" id="gravel-count" /></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section class="timespan">
+            <h2>Doba zápůjčky</h2>
+            <label for="time-select"
+              >Vyberte délku plánované zápujčky:
+              <select name="time-select" id="time-select">
+                <option value="1">1 den</option>
+                <option value="3">3 dny</option>
+                <option value="7">1 týden</option>
+                <option value="31">1 měsíc</option>
+              </select>
+            </label>
+          </section>
+          <section class="bikeholder">
+            <h2>Cyklonosič</h2>
+            <div class="bikeholder-radios">
+              <label for="bikeholder-0"
+                ><input
+                  type="radio"
+                  name="bikeholderRadio"
+                  id="bikeholder-0"
+                />Cyklonosič střešní (+5% z celkové částky navíc)</label
+              >
+              <label for="bikeholder-1"
+                ><input
+                  type="radio"
+                  name="bikeholderRadio"
+                  id="bikeholder-1"
+                />Cyklonosič na tažné zařízení (+10% z celkové částky
+                navíc)</label
+              >
+              <label for="bikeholder-2"
+                ><input
+                  type="radio"
+                  name="bikeholderRadio"
+                  id="bikeholder-2"
+                />Není třeba cyklonosič (nastavit jako default)</label
+              >
+            </div>
+          </section>
+          <section class="sumarize">
+            <h2>Vyúčtování</h2>
+            <table class="reservation-table">
+              <tr>
+                <td>Jsem ochoten zaplatit</td>
+                <td colspan="2"><input type="number" id="price-offer" /> kč</td>
+              </tr>
+              <tr>
+                <td>Celková cena</td>
+                <td>
+                  <input type="button" value="Vypočti" class="btn-sum" />
+                </td>
+                <td><p id="result-price">1500</p></td>
+              </tr>
+              <tr>
+                <td colspan="3">
+                  <p id="result-message">Nemáte na to</p>
+                </td>
+              </tr>
+            </table>
+          </section>
+          <section class="contact">
+            <h2>Kontakt</h2>
+            <label for="email-input">E-mail</label>
+            <input
+              type="email"
+              name="email-input"
+              id="email-input"
+              placeholder="john@joe.com"
+              required
+            /><span> * musí obsahovat znak @</span>
+          </section>
+          <section class="finalize">
+            <input type="button" value="Odeslat" class="btn-send" />
+            <input type="button" value="Reset" class="btn-reset" />
+          </section>
+        </form>
+      </section>
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>
